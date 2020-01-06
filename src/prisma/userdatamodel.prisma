@@ -1,0 +1,7 @@
+type users {
+  id: ID! @id
+  email: String! @unique
+  phone: String! @unique
+  vehicalnumber: String @unique
+  createdon: DateTime! @createdAt
+}

@@ -1,0 +1,14 @@
+datamodel:
+  - userdatamodel.prisma
+  - pathdatamodel.prisma
+#endpoint: ''
+endpoint: http://localhost:4466
+
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma
+
+hooks:
+  post-deploy:
+    - prisma generate

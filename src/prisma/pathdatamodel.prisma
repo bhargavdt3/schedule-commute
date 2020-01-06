@@ -1,0 +1,9 @@
+
+type path {
+    id: ID! @id
+    source: String!
+    destination: String!
+    scheduledat: DateTime!
+    recurring: Boolean
+    userid: users! @relation(link: INLINE) 
+}
